@@ -80,6 +80,9 @@
     CGRect contentFrame = [[self contentZoomView] frame];
     CGRect bounds = [self bounds];
     
+    NSAssert(contentFrame.size.width > 0.0, @"Content width must be greater than 0");
+    NSAssert(contentFrame.size.height > 0.0, @"Content height must be greater than 0");
+    
     CGFloat xRatio = bounds.size.width / contentFrame.size.width;
     CGFloat yRatio = bounds.size.height / contentFrame.size.height;
     

@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		870411B8173D70C100FA70FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870411B7173D70C100FA70FE /* UIKit.framework */; };
+		870411BA173D70C100FA70FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870411B9173D70C100FA70FE /* Foundation.framework */; };
+		870411BC173D70C100FA70FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 870411BB173D70C100FA70FE /* CoreGraphics.framework */; };
+		874669E81774DA55003961F6 /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 874669E41774DA4D003961F6 /* MTAppDelegate.m */; };
+		874669E91774DA5A003961F6 /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874669E61774DA4D003961F6 /* MTViewController.m */; };
+		874669EA1774DA5D003961F6 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874669E71774DA4D003961F6 /* test.jpg */; };
+		874669F11774DA76003961F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 874669EB1774DA76003961F6 /* Default-568h@2x.png */; };
+		874669F21774DA76003961F6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 874669EC1774DA76003961F6 /* Default.png */; };
+		874669F31774DA76003961F6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 874669ED1774DA76003961F6 /* Default@2x.png */; };
+		874669F41774DA76003961F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 874669EE1774DA76003961F6 /* main.m */; };
+		874669FA1774DB0A003961F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 874669F71774DA99003961F6 /* InfoPlist.strings */; };
+		87466A061774DB73003961F6 /* MTImageZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87466A031774DB73003961F6 /* MTImageZoomScrollView.m */; };
+		87466A071774DB73003961F6 /* MTZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87466A051774DB73003961F6 /* MTZoomScrollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		870411B4173D70C100FA70FE /* MTZoomScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTZoomScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		870411B7173D70C100FA70FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		870411B9173D70C100FA70FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		870411BB173D70C100FA70FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		874669E31774DA4D003961F6 /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTAppDelegate.h; path = MTZoomScrollView/MTAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		874669E41774DA4D003961F6 /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTAppDelegate.m; path = MTZoomScrollView/MTAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		874669E51774DA4D003961F6 /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MTViewController.h; path = MTZoomScrollView/MTViewController.h; sourceTree = SOURCE_ROOT; };
+		874669E61774DA4D003961F6 /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MTViewController.m; path = MTZoomScrollView/MTViewController.m; sourceTree = SOURCE_ROOT; };
+		874669E71774DA4D003961F6 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = MTZoomScrollView/test.jpg; sourceTree = SOURCE_ROOT; };
+		874669EB1774DA76003961F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "MTZoomScrollView/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		874669EC1774DA76003961F6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = MTZoomScrollView/Default.png; sourceTree = SOURCE_ROOT; };
+		874669ED1774DA76003961F6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "MTZoomScrollView/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		874669EE1774DA76003961F6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MTZoomScrollView/main.m; sourceTree = SOURCE_ROOT; };
+		874669EF1774DA76003961F6 /* MTZoomScrollView-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MTZoomScrollView-Info.plist"; path = "MTZoomScrollView/MTZoomScrollView-Info.plist"; sourceTree = SOURCE_ROOT; };
+		874669F01774DA76003961F6 /* MTZoomScrollView-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MTZoomScrollView-Prefix.pch"; path = "MTZoomScrollView/MTZoomScrollView-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		874669F81774DA99003961F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MTZoomScrollView/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		87466A021774DB73003961F6 /* MTImageZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTImageZoomScrollView.h; path = ../../Classes/MTImageZoomScrollView.h; sourceTree = "<group>"; };
+		87466A031774DB73003961F6 /* MTImageZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTImageZoomScrollView.m; path = ../../Classes/MTImageZoomScrollView.m; sourceTree = "<group>"; };
+		87466A041774DB73003961F6 /* MTZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZoomScrollView.h; path = ../../Classes/MTZoomScrollView.h; sourceTree = "<group>"; };
+		87466A051774DB73003961F6 /* MTZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZoomScrollView.m; path = ../../Classes/MTZoomScrollView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		870411B1173D70C100FA70FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870411B8173D70C100FA70FE /* UIKit.framework in Frameworks */,
+				870411BA173D70C100FA70FE /* Foundation.framework in Frameworks */,
+				870411BC173D70C100FA70FE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		870411AB173D70C100FA70FE = {
+			isa = PBXGroup;
+			children = (
+				870411BD173D70C100FA70FE /* MTZoomScrollView */,
+				870411B6173D70C100FA70FE /* Frameworks */,
+				870411B5173D70C100FA70FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		870411B5173D70C100FA70FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				870411B4173D70C100FA70FE /* MTZoomScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		870411B6173D70C100FA70FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				870411B7173D70C100FA70FE /* UIKit.framework */,
+				870411B9173D70C100FA70FE /* Foundation.framework */,
+				870411BB173D70C100FA70FE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		870411BD173D70C100FA70FE /* MTZoomScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				87466A021774DB73003961F6 /* MTImageZoomScrollView.h */,
+				87466A031774DB73003961F6 /* MTImageZoomScrollView.m */,
+				87466A041774DB73003961F6 /* MTZoomScrollView.h */,
+				87466A051774DB73003961F6 /* MTZoomScrollView.m */,
+				874669E31774DA4D003961F6 /* MTAppDelegate.h */,
+				874669E41774DA4D003961F6 /* MTAppDelegate.m */,
+				874669E51774DA4D003961F6 /* MTViewController.h */,
+				874669E61774DA4D003961F6 /* MTViewController.m */,
+				874669E71774DA4D003961F6 /* test.jpg */,
+				870411BE173D70C100FA70FE /* Supporting Files */,
+			);
+			name = MTZoomScrollView;
+			path = MTPhotoScrollView;
+			sourceTree = "<group>";
+		};
+		870411BE173D70C100FA70FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				874669EB1774DA76003961F6 /* Default-568h@2x.png */,
+				874669EC1774DA76003961F6 /* Default.png */,
+				874669ED1774DA76003961F6 /* Default@2x.png */,
+				874669EE1774DA76003961F6 /* main.m */,
+				874669EF1774DA76003961F6 /* MTZoomScrollView-Info.plist */,
+				874669F01774DA76003961F6 /* MTZoomScrollView-Prefix.pch */,
+				874669F71774DA99003961F6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		870411B3173D70C100FA70FE /* MTZoomScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 870411D7173D70C100FA70FE /* Build configuration list for PBXNativeTarget "MTZoomScrollView" */;
+			buildPhases = (
+				870411B0173D70C100FA70FE /* Sources */,
+				870411B1173D70C100FA70FE /* Frameworks */,
+				870411B2173D70C100FA70FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTZoomScrollView;
+			productName = MTPhotoScrollView;
+			productReference = 870411B4173D70C100FA70FE /* MTZoomScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		870411AC173D70C100FA70FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "WillowTree Apps, Inc.";
+			};
+			buildConfigurationList = 870411AF173D70C100FA70FE /* Build configuration list for PBXProject "MTZoomScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 870411AB173D70C100FA70FE;
+			productRefGroup = 870411B5173D70C100FA70FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				870411B3173D70C100FA70FE /* MTZoomScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		870411B2173D70C100FA70FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874669EA1774DA5D003961F6 /* test.jpg in Resources */,
+				874669F11774DA76003961F6 /* Default-568h@2x.png in Resources */,
+				874669F21774DA76003961F6 /* Default.png in Resources */,
+				874669F31774DA76003961F6 /* Default@2x.png in Resources */,
+				874669FA1774DB0A003961F6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		870411B0173D70C100FA70FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				874669E81774DA55003961F6 /* MTAppDelegate.m in Sources */,
+				874669E91774DA5A003961F6 /* MTViewController.m in Sources */,
+				874669F41774DA76003961F6 /* main.m in Sources */,
+				87466A061774DB73003961F6 /* MTImageZoomScrollView.m in Sources */,
+				87466A071774DB73003961F6 /* MTZoomScrollView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		874669F71774DA99003961F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				874669F81774DA99003961F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		870411D5173D70C100FA70FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		870411D6173D70C100FA70FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		870411D8173D70C100FA70FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTZoomScrollView/MTZoomScrollView-Prefix.pch";
+				INFOPLIST_FILE = "MTZoomScrollView/MTZoomScrollView-Info.plist";
+				PRODUCT_NAME = MTZoomScrollView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		870411D9173D70C100FA70FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MTZoomScrollView/MTZoomScrollView-Prefix.pch";
+				INFOPLIST_FILE = "MTZoomScrollView/MTZoomScrollView-Info.plist";
+				PRODUCT_NAME = MTZoomScrollView;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		870411AF173D70C100FA70FE /* Build configuration list for PBXProject "MTZoomScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				870411D5173D70C100FA70FE /* Debug */,
+				870411D6173D70C100FA70FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		870411D7173D70C100FA70FE /* Build configuration list for PBXNativeTarget "MTZoomScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				870411D8173D70C100FA70FE /* Debug */,
+				870411D9173D70C100FA70FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 870411AC173D70C100FA70FE /* Project object */;
+}
