@@ -18,8 +18,9 @@
 		870411CE173D70C100FA70FE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 870411CD173D70C100FA70FE /* Default-568h@2x.png */; };
 		870411D1173D70C100FA70FE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870411CF173D70C100FA70FE /* MainStoryboard.storyboard */; };
 		870411D4173D70C100FA70FE /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 870411D3173D70C100FA70FE /* MTViewController.m */; };
-		870411DC173D711600FA70FE /* MTPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 870411DB173D711600FA70FE /* MTPhotoScrollView.m */; };
 		870411DE173D734C00FA70FE /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870411DD173D734C00FA70FE /* test.jpg */; };
+		874669DF1774A8B8003961F6 /* MTZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874669DE1774A8B8003961F6 /* MTZoomScrollView.m */; };
+		874669E21774AC31003961F6 /* MTImageZoomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874669E11774AC31003961F6 /* MTImageZoomScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,11 @@
 		870411D0173D70C100FA70FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		870411D2173D70C100FA70FE /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
 		870411D3173D70C100FA70FE /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
-		870411DA173D711600FA70FE /* MTPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPhotoScrollView.h; sourceTree = "<group>"; };
-		870411DB173D711600FA70FE /* MTPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPhotoScrollView.m; sourceTree = "<group>"; };
 		870411DD173D734C00FA70FE /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		874669DD1774A8B8003961F6 /* MTZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZoomScrollView.h; sourceTree = "<group>"; };
+		874669DE1774A8B8003961F6 /* MTZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZoomScrollView.m; sourceTree = "<group>"; };
+		874669E01774AC31003961F6 /* MTImageZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTImageZoomScrollView.h; sourceTree = "<group>"; };
+		874669E11774AC31003961F6 /* MTImageZoomScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTImageZoomScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,13 +91,12 @@
 		870411BD173D70C100FA70FE /* MTPhotoScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				874669DC1774A8B8003961F6 /* Classes */,
 				870411C6173D70C100FA70FE /* MTAppDelegate.h */,
 				870411C7173D70C100FA70FE /* MTAppDelegate.m */,
 				870411CF173D70C100FA70FE /* MainStoryboard.storyboard */,
 				870411D2173D70C100FA70FE /* MTViewController.h */,
 				870411D3173D70C100FA70FE /* MTViewController.m */,
-				870411DA173D711600FA70FE /* MTPhotoScrollView.h */,
-				870411DB173D711600FA70FE /* MTPhotoScrollView.m */,
 				870411DD173D734C00FA70FE /* test.jpg */,
 				870411BE173D70C100FA70FE /* Supporting Files */,
 			);
@@ -113,6 +115,18 @@
 				870411CD173D70C100FA70FE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		874669DC1774A8B8003961F6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				874669DD1774A8B8003961F6 /* MTZoomScrollView.h */,
+				874669DE1774A8B8003961F6 /* MTZoomScrollView.m */,
+				874669E01774AC31003961F6 /* MTImageZoomScrollView.h */,
+				874669E11774AC31003961F6 /* MTImageZoomScrollView.m */,
+			);
+			name = Classes;
+			path = ../../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +200,8 @@
 				870411C4173D70C100FA70FE /* main.m in Sources */,
 				870411C8173D70C100FA70FE /* MTAppDelegate.m in Sources */,
 				870411D4173D70C100FA70FE /* MTViewController.m in Sources */,
-				870411DC173D711600FA70FE /* MTPhotoScrollView.m in Sources */,
+				874669DF1774A8B8003961F6 /* MTZoomScrollView.m in Sources */,
+				874669E21774AC31003961F6 /* MTImageZoomScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +324,7 @@
 				870411D9173D70C100FA70FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

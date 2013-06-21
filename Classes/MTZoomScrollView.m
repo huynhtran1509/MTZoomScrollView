@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 WillowTree Apps, Inc. All rights reserved.
 //
 
-#import "MTPhotoScrollView.h"
+#import "MTZoomScrollView.h"
 
-@interface MTPhotoScrollView()
+@interface MTZoomScrollView()
 @end
 
-@implementation MTPhotoScrollView
+@implementation MTZoomScrollView
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -39,10 +39,6 @@
 
 - (void)commonInit
 {
-    UIImageView *imageView = [UIImageView new];
-    [self addSubview:imageView];
-    [self setImageView:imageView];
-    
     [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
     [self setContentSize:self.bounds.size];
     [self setDelegate:self];
@@ -53,14 +49,8 @@
     [self setAlwaysBounceHorizontal:YES];
     [self setAlwaysBounceVertical:YES];
     [self setClipsToBounds:YES];
-}
-
-- (void)sizeImageViewToFit
-{
-    UIImage *image = [[self imageView] image];
-    [[self imageView] setFrame:CGRectMake(0.0, 0.0, [image size].width, [image size].height)];
-    [self layoutSubviews];
-    [self setMaxMinZoomScalesForCurrentBounds];
+    [self setMinContentZoomScale:1.0];
+    [self setMaxContentZoomScale:4.0];
 }
 
 - (void)layoutSubviews
@@ -68,7 +58,7 @@
     [super layoutSubviews];
     
     CGSize boundsSize = [self bounds].size;
-    CGRect frameToCenter = [[self imageView] frame];
+    CGRect frameToCenter = [[self contentZoomView] frame];
     
     // center horizontally
     if (frameToCenter.size.width < boundsSize.width)
@@ -82,40 +72,38 @@
     else
         frameToCenter.origin.y = 0;
     
-    [[self imageView] setFrame:frameToCenter];
+    [[self contentZoomView] setFrame:frameToCenter];
 }
 
-- (void)setMaxMinZoomScalesForCurrentBounds
+- (void)setZoomScaleForContentSize
 {
-    CGRect imageFrame = [[self imageView] frame];
+    CGRect contentFrame = [[self contentZoomView] frame];
     CGRect bounds = [self bounds];
     
-    CGFloat xRatio = bounds.size.width / imageFrame.size.width;
-    CGFloat yRatio = bounds.size.height / imageFrame.size.height;
+    CGFloat xRatio = bounds.size.width / contentFrame.size.width;
+    CGFloat yRatio = bounds.size.height / contentFrame.size.height;
     
     CGFloat minScale = MAX(xRatio, yRatio);
     
     // Reset zoom before making calculations
-    [self setMinimumZoomScale:minScale];
+    [self setMinimumZoomScale:minScale*0.5];
     [self setMaximumZoomScale:minScale*4.0];
     [self setZoomScale:minScale];
-    [self setContentSize:[[self imageView] frame].size];
+    [self setContentSize:[[self contentZoomView] frame].size];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    return [self imageView];
+    return [self contentZoomView];
 }
 
-- (void)setImage:(UIImage *)image
+- (void)setContentZoomView:(UIView *)contentZoomView
 {
-    [[self imageView] setImage:image];
-    [self sizeImageViewToFit];
-}
-
-- (UIImage *)image
-{
-    return [[self imageView] image];
+    _contentZoomView = contentZoomView;
+    [contentZoomView setFrame:[self bounds]];
+    [self addSubview:contentZoomView];
+    [self layoutSubviews];
+    [self setZoomScaleForContentSize];
 }
 
 @end
