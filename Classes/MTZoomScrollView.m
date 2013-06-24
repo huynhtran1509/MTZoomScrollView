@@ -39,7 +39,6 @@
 
 - (void)commonInit
 {
-    [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
     [self setContentSize:self.bounds.size];
     [self setDelegate:self];
     [self setMinimumZoomScale:1.0];
@@ -60,13 +59,13 @@
     CGSize boundsSize = [self bounds].size;
     CGRect frameToCenter = [[self contentZoomView] frame];
     
-    // center horizontally
+    // Center content view horizontally
     if (frameToCenter.size.width < boundsSize.width)
         frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
     else
         frameToCenter.origin.x = 0;
     
-    // center vertically
+    // Center content view vertically
     if (frameToCenter.size.height < boundsSize.height)
         frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
     else
@@ -86,18 +85,19 @@
     CGFloat xRatio = bounds.size.width / contentFrame.size.width;
     CGFloat yRatio = bounds.size.height / contentFrame.size.height;
     
-    CGFloat minScale = MAX(xRatio, yRatio);
+    CGFloat minimumRatio = xRatio;
+    
+    // Get the smaller/larger of the width/height ratios for the right content mode
+    if ([self contentViewContentMode] == MTZoomScrollViewContentModeSizeToFit)
+        minimumRatio = MIN(xRatio, yRatio);
+    else if ([self contentViewContentMode] == MTZoomScrollViewContentModeSizeToFill)
+        minimumRatio = MAX(xRatio, yRatio);
     
     // Reset zoom before making calculations
-    [self setMinimumZoomScale:minScale*0.5];
-    [self setMaximumZoomScale:minScale*4.0];
-    [self setZoomScale:minScale];
+    [self setMinimumZoomScale:minimumRatio*[self minContentZoomScale]];
+    [self setMaximumZoomScale:minimumRatio*[self maxContentZoomScale]];
+    [self setZoomScale:minimumRatio];
     [self setContentSize:[[self contentZoomView] frame].size];
-}
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
-    return [self contentZoomView];
 }
 
 - (void)setContentZoomView:(UIView *)contentZoomView
@@ -107,6 +107,13 @@
     [self addSubview:contentZoomView];
     [self layoutSubviews];
     [self setZoomScaleForContentSize];
+}
+
+#pragma mark - UIScrollViewDelegate Methods
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return [self contentZoomView];
 }
 
 @end

@@ -8,7 +8,6 @@
 
 #import "MTImageZoomScrollView.h"
 @interface MTImageZoomScrollView ()
-@property (nonatomic, readonly) UIImageView *imageView;
 @end
 
 @implementation MTImageZoomScrollView
