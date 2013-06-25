@@ -50,6 +50,7 @@
     [self setClipsToBounds:YES];
     [self setMinContentZoomScale:1.0];
     [self setMaxContentZoomScale:4.0];
+    [self setContentViewContentMode:MTZoomScrollViewContentModeSizeToFit];
 }
 
 - (void)layoutSubviews
@@ -74,8 +75,17 @@
     [[self contentZoomView] setFrame:frameToCenter];
 }
 
+- (void)resetZoomScale
+{
+    [self setMinimumZoomScale:1.0];
+    [self setMaximumZoomScale:1.0];
+    [self setZoomScale:1.0];
+}
+
 - (void)setZoomScaleForContentSize
 {
+    [self resetZoomScale];
+    
     CGRect contentFrame = [[self contentZoomView] frame];
     CGRect bounds = [self bounds];
     

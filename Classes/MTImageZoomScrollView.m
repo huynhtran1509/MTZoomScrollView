@@ -33,6 +33,7 @@
 - (void)sizeImageViewToFit
 {
     UIImage *image = [[self imageView] image];
+    [self resetZoomScale];
     [[self imageView] setFrame:CGRectMake(0.0, 0.0, [image size].width, [image size].height)];
     [self layoutSubviews];
     [self setZoomScaleForContentSize];

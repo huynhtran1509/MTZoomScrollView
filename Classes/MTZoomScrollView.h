@@ -49,4 +49,9 @@ typedef NS_ENUM(NSInteger, MTZoomScrollViewContentMode)
  */
 - (void)setZoomScaleForContentSize;
 
+/**
+ Resets zoom scale to 1.0 for calculating frame sizes.
+ */
+- (void)resetZoomScale;
+
 @end
